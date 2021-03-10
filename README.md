@@ -1,2 +1,2 @@
-# pands-problem-sheets
-Repository for Weekly Tasks for PANDS2021
+# pands-problem-sheet
+Weekly Problem Sheets

@@ -7,24 +7,18 @@
 import sys
 
 def collatz(number):
-    if number % 2 == 0:            #conditions for even number
-        result = number // 2
-    elif number % 2 == 1:          #conditions for odd number
-        result = 3 * number + 1
-  
-    while result == 1:             #conditions for number 1
-        print (result)
-        number = result
-        return collatz(number)
-    while result ! = 1:
+
+    if number % 2 == 0:       #conditions for even numbers
+        print(number // 2)
+        return number //2
+    elif number % 2 != 0:     #conditions for odd numbers
+        result = 3*number+1
         print(result)
-        number = result
-        return collatz(number)
+        return result
 
-print('Enter a number')
 try:
-    number = int(input())
-    collatz(number)
+    number = input('Enter a number:')          #user integer input
+    while number != 1:                         #performs a while loop until the number becomes 1
+        number = collatz(int(number))          #passes the number to collatz() function until it arrives at 1
 except ValueError:
-    print('You must enter an integer type.')
-
+    print('Value Error. Please enter an integer')

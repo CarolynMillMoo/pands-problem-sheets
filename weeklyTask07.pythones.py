@@ -4,7 +4,8 @@
  
 filename = "weeklyTask07.Ch1HP&PS.txt"
 
-with open(filename, "r") as f:
-    text = f.read(25)
-    print(text)
-    
+with open(filename, "r", encoding="latin-1") as f:
+    data = f.read()
+    occurences = data.count("e")
+
+print('Number of occurences of e:', occurences)

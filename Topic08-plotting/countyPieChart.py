@@ -3,8 +3,6 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-
 
 possibleCounties = ['Wexford', 'Cork', 'Kerry', 'Galway', 'Clare']
 
@@ -16,9 +14,10 @@ counties = np.random.choice(
 
 unique, counts = np.unique(counties, return_counts=True)
 
-plt.pie(counts, labels = unique)
+#plt.pie(counts, labels = unique)
 
-plt.show()
+#plt.show()
 
 plt.bar(unique, counts)
+plt.show()
 
